@@ -6,7 +6,7 @@ const sitemap = require("./plugins/next-sitemap");
 const pageExtensions = ["jsx", "js", "ts", "tsx", "mdx"];
 
 const withMDX = nextMDX({
-  extension: /[/\\](pages|blog|components[/\\](home))[/\\](.+)\.mdx?$/,
+  extension: /[/\\](pages|posts|components[/\\])(.+)\.mdx?$/,
   options: {
     hastPlugins: [rehypePrism]
   }
