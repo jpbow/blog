@@ -1,4 +1,4 @@
-const { createWriteStream } = require("fs");
+const fs = require("fs");
 const { SitemapStream } = require("sitemap");
 const glob = require("glob");
 
@@ -32,7 +32,11 @@ module.exports = (pluginOptions = {}) => (nextConfig = {}) => {
         // Creates a sitemap object given the input configuration with URLs
         const sitemap = new SitemapStream({ hostname });
 
-        const writeStream = createWriteStream("./.next/static/sitemap.xml");
+        const destinationPath = "./.next/static";
+        !fs.existsSync(destinationPath) && fs.mkdirSync(destinationPath);
+        const writeStream = fs.createWriteStream(
+          `${destinationPath}/sitemap.xml`
+        );
         sitemap.pipe(writeStream);
 
         pages.map(page => {
