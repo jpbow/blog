@@ -1,10 +1,10 @@
 {
-  "name": "next-site",
-  "description": "Next.js Official Homepage",
+  "name": "stoked-dev",
+  "description": "Stoked.dev Blog",
   "version": "1.0.0",
-  "repository": "zeit/next-site",
+  "repository": "jpbow/blog",
   "author": "",
-  "homepage": "https://nextjs.org",
+  "homepage": "https://stoked.dev",
   "license": "MIT",
   "engines": {
     "node": ">=12.x"
