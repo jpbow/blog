@@ -32,7 +32,7 @@ module.exports = (pluginOptions = {}) => (nextConfig = {}) => {
         // Creates a sitemap object given the input configuration with URLs
         const sitemap = new SitemapStream({ hostname });
 
-        const writeStream = createWriteStream(".next/static/sitemap.xml");
+        const writeStream = createWriteStream("./.next/static/sitemap.xml");
         sitemap.pipe(writeStream);
 
         pages.map(page => {
